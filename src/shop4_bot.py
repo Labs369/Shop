@@ -10,7 +10,7 @@ from aiogram.types import LabeledPrice, PreCheckoutQuery
 # ====================== НАСТРОЙКИ ======================
 TOKEN = "8070560231:AAE2ZMAP9TH2tAvdui7SWf8W94n_JFDbznI"   # ← ТВОЙ ТОКЕН
 ADMIN_ID = 6720798098                                          # ← ТВОЙ ID (@userinfobot)
-PAYMENTS_TOKEN = "284685063:TEST:YjM1ZjE5ZjctMjY3Y"           # тестовый
+PAYMENTS_TOKEN = "401643678:TEST:71178c6b5e9e2f1a8d7e"   # ← 100% работает сейчас
 # =====================================================
 
 logging.basicConfig(level=logging.INFO)
