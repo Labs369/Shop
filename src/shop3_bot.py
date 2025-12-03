@@ -12,7 +12,7 @@ from aiogram.filters import Command
 from aiogram.types import LabeledPrice, PreCheckoutQuery
 
 # ====================== НАСТРОЙКИ ======================
-TOKEN = "8070560231:AAGwQJ6OzqimPm9brVXR9aFUgqKwOAjCgnM"   # ← ТВОЙ ТОКЕН
+TOKEN = "8070560231:AAE2ZMAP9TH2tAvdui7SWf8W94n_JFDbznI"   # ← ТВОЙ ТОКЕН
 ADMIN_ID = 6720798098                                          # ← ТВОЙ ID (узнай у @userinfobot)
 PAYMENTS_TOKEN = "284685063:TEST:YjM1ZjE5ZjctMjY3Y"           # тестовый платеж
 # =====================================================
