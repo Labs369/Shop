@@ -30,7 +30,10 @@ async def start(message: types.Message):
     )
 
 @dp.message(Command("menu"))
-async def menu(message: types.Message):
+async def show_menu(message: types.Message):
     keyboard = types.InlineKeyboardMarkup(inline_keyboard=[
         [types.InlineKeyboardButton(text="Футболка белая — 799 ₽", callback_data="buy_1")],
         [types.InlineKeyboardButton(text="Кепка чёрная — 499 ₽", callback_data="buy_2")],
+        [types.InlineKeyboardButton(text="Носки 3 пары — 299 ₽", callback_data="buy_3")],
+    ])
+    await message.answer("Выбери товар:", reply_markup=keyboard)
