@@ -110,7 +110,7 @@ async def buy(call: types.CallbackQuery):
         description=item["desc"],
         payload=f"item_{idx}",
         provider_token=PAYMENTS_TOKEN,
-        currency="RUB",
+        currency="PLN",
         prices=[LabeledPrice(label=item["name"], amount=item["price"])],
     )
     await call.answer("Оплата открыта!")
