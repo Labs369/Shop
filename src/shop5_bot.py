@@ -168,6 +168,22 @@ async def admin_add_text(message: types.Message):
     await message.answer(f"Товар добавлен! Всего: {len(catalog)}")
     await show_card(message, len(catalog)-1, True)
 
+# === АДМИН-ПАНЕЛЬ ===
+@dp.callback_query(F.data == "admin_panel")
+async def admin_panel(call: types.CallbackQuery):
+    if call.from_user.id != ADMIN_ID:
+        await call.answer("Доступ запрещён", show_alert=True)
+        return
+
+    text = f"Админка\n\n" \
+           f"Товаров в каталоге: {len(catalog)}\n" \
+           f"Для добавления — пришли фото + 3 строки\n" \
+           f"Для удаления — нажми кнопку «Удалить» под товаром"
+
+    keyboard = types.InlineKeyboardMarkup(inline_keyboard=[
+        [types.InlineKeyboardButton(text="Обновить каталог", callback_data="refresh")],
+        [types.InlineKeyboardButton(text="Скачать backup
+
 # === ЗАПУСК ===
 async def main():
     me = await bot.get_me()
