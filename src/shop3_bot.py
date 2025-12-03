@@ -98,7 +98,7 @@ async def buy(call: types.CallbackQuery):
         description=item["desc"],
         payload=f"item_{idx}",
         provider_token=PAYMENTS_TOKEN,
-        currency="RUB",
+        currency="zl",
         prices=[LabeledPrice(label=item["name"], amount=item["price"])],
         photo_url=item["photo"] if item["photo"].startswith("http") else None,
     )
